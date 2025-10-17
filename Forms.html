@@ -6,30 +6,49 @@
     <title>HTML Forms</title>
 </head>
 <body>
+    <div style="border: 10px solid black;">
         <form>
-        <h2><center>Login</center></h2>
-         <center> <label for="login">Username</label>  <input type="text" id="login" name="login" value="Hardik Dagar"></form><br>
-                    <label for="xyz">Password</label>  <input type="password" id="xyz" name="xyz"><br></center>          
-        <br><center><input type="button" id="button" value="submit"></center>  
+        <h2><center><u>Login</u></center></h2>
+         <center> <label for="username">Username</label>  <input type="text" id="login" name="login" placeholder="Username" required></form><br></center> 
+         <center> <label for="email">Email</label> <input type="text" id="Email" name="Email" placeholder="email id" required></form><br></center> 
+         <center> <label for="xyz">Password</label>  <input type="password" id="xyz" name="xyz" placeholder="Password" required controls><br></center>  
     </form>
     <br>
-    <center><select name="cars" id="cars">
+
+
+
+
+    <center><p><u><b>Select your Favourite Car:</b></u></p>
+        <select name="cars" id="cars">
         <option value="Buggati">Buggati</option>
         <option value="BMW">BMW</option>
         <option value="Pagani">Pagani</option>
         <option value="Mclaren">Mclaren</option></center>
-        <br>
     </select>
-    <br><br>
+    <br><br><br>
+
+
+
     <center><textarea rows="4" cols="50" name="comment" form="usrform">
-The HTML <form> element is used to create an HTML form for user input.</center></textarea>
-    <br>
+The HTML <form> element is used to create an HTML form for user input.</textarea></center>
+    <br><br>
+
+
+
+
     <input type="checkbox" id="xyz" name="xyz" value="Bicycle">
     <label for="xyz"> I have a Bicycle</label><br>
     <input type="checkbox" id="xyz" name="xyz" value="Bike">
     <label for="xyz"> I have a Bike</label><br>
     <input type="checkbox" id="xyz" name="xyz" value="Car">
-    <label for="xyz"> I have a Car</label><br><br>
-    </body>
+    <label for="xyz"> I have a Car</label>
+    <br><br>
 
+
+
+
+    <center><input type="Submit" id="button" value="Submit"></center>
+    <br>
+    </div>
+    </body>
 </html>
