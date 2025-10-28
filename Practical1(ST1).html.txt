@@ -5,9 +5,9 @@
 </head>
 
 <body>
-	<h1> XYZ Company <h1>
+	<h1> XYZ Company </h1>
 <br>
-	<p> Welcome to your most fascinating e-commerce store , buy whatever you want <p>
+	<p> Welcome to your most fascinating e-commerce store , buy whatever you want </p>
 <br>
 	<a href ="XYZ URL" > Official website </a>
 	<a href ="ABC URL" > Help & Request </a>
@@ -31,5 +31,6 @@
 
 </body>
 </html>
+
 
 
