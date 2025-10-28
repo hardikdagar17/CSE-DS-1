@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Web Designing Lab ST-1 </title>
+</head>
+
+<body>
+	<h1> XYZ Company <h1>
+<br>
+	<p> Welcome to your most fascinating e-commerce store , buy whatever you want <p>
+<br>
+	<a href ="XYZ URL" > Official website </a>
+	<a href ="ABC URL" > Help & Request </a>
+<br>
+<h3> Here's, our company review: <h3>
+	<iframe width="300" height="150" src="YT video link" controls> </iframe>
+	<video src="XYZ link" width="300" height="150"> Review Video </video>
+<br>
+<br>
+	<h3>Here are some images of our happy customers with our products.</h3>
+	<img src="XYZ link" height="300" width="500">
+<br>
+<br>
+	<h3>Now, here are some multimedia options related to our E-commerce store. </h3>
+	<img src="xyz link" width="100" height="80">
+<br>
+	<video src="xyz link" width="100" height="80">Mini Video</video>
+<br>
+	<audio src="xyz link"></audio>
+<br>
+
+</body>
+</html>
+
+
