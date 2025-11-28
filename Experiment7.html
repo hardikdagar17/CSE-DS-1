@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Navigation Menu — block / inline / inline-block / float / clear</title>
+  <style>
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.4; padding: 20px; }
+
+    header { margin-bottom: 18px; }
+    h1 { font-size: 20px; margin-bottom: 8px; }
+    p.note { color: #444; font-size: 14px; margin-bottom: 18px; }
+
+    
+    
+    .nav-wrap {
+      background: linear-gradient(90deg, #1f2937, #374151);
+      color: white;
+      border-radius: 8px;
+      padding: 10px;
+      overflow: auto; 
+    }
+
+    
+    
+    .logo {
+      display: inline-block; 
+      vertical-align: middle;
+      margin-right: 18px;
+      padding: 6px 12px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 6px;
+      font-weight: 700;
+    }
+
+    
+    
+    nav.main-nav {
+      float: left; 
+      vertical-align: middle; 
+    }
+
+    
+    nav.main-nav ul { list-style: none; }
+
+    
+    nav.main-nav li {
+      display: inline; 
+      margin-right: 12px; 
+    }
+
+    nav.main-nav a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 8px; 
+      border-radius: 4px;
+    }
+    nav.main-nav a:hover { background: rgba(255,255,255,0.08); }
+
+    
+    
+    .actions {
+      float: right; 
+      display: inline-block; 
+      vertical-align: middle;
+    }
+    .actions a {
+      display: inline-block; 
+      margin-left: 8px;
+      padding: 6px 10px;
+      background: rgba(255,255,255,0.08);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    
+    
+    
+    .clearfix-block {
+      clear: both; 
+      margin-top: 14px;
+      padding: 10px;
+      background: #ffffff;
+      color: #111827;
+      border-radius: 6px;
+    }
+
+    
+    @media (max-width: 520px) {
+      .logo, nav.main-nav, .actions { float: none; display: block; text-align: center; }
+      nav.main-nav li { display: block; margin: 6px 0; }
+      .actions a { margin: 6px 4px; }
+      .nav-wrap { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Navigation Menu — CSS behavior demo</h1>
+    <p class="note">This small demo uses <strong>block</strong> (nav-wrap &amp; other containers), <strong>inline</strong> (nav list items), <strong>inline-block</strong> (logo, buttons), <strong>float</strong> (left/right floats for layout) and <strong>clear</strong> (to push content below floated elements).</p>
+  </header>
+
+  
+  <div class="nav-wrap">
+
+    
+    <div class="logo">MySite</div>
+
+    
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    
+    <div class="actions">
+      <a href="#login">Login</a>
+      <a href="#signup">Sign up</a>
+    </div>
+
+    
+  </div>
+
+  
+  <section class="clearfix-block">
+    <h2>Content below the navigation</h2>
+    <p>This block uses <code>clear: both</code> so it always sits under the floated navigation and action items. The nav itself demonstrates how inline, inline-block and floats interact in a compact header layout.</p>
+  </section>
+
+  <main style="margin-top:14px;">
+    <h3>How the CSS keywords are used here</h3>
+    <ul>
+      <li><strong>block</strong> — .nav-wrap and the <code>section.clearfix-block</code> are block-level by default and occupy full width.</li>
+      <li><strong>inline</strong> — the nav list items (<code>li</code>) are set to <code>display:inline</code> so links flow horizontally like words in a sentence.</li>
+      <li><strong>inline-block</strong> — the logo and action buttons use <code>display:inline-block</code> so they can set padding/size while still aligning on one line.</li>
+      <li><strong>float</strong> — the nav is floated left and the actions floated right to create a classic header layout without flexbox/grid.</li>
+      <li><strong>clear</strong> — <code>clear:both</code> on the following block pushes that content below the floated elements.</li>
+    </ul>
+
+    <p style="margin-top:12px;">Resize the browser to see the media query stack the elements for small screens (no flex/grid used — only the requested display modes, float and clear).</p>
+  </main>
+</body>
+</html>
