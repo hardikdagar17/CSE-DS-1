@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Profile Card (Flexbox)</title>
+  <style>
+    :root{
+      --bg:#f3f6fb;
+      --card:#ffffff;
+      --accent:#2b7cff;
+      --muted:#6b7280;
+      --radius:14px;
+      --gap:16px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    
+    html,body{height:100%;margin:0;background:var(--bg)}
+    .page{
+      min-height:100%;
+      display:flex;
+      justify-content:center; 
+      align-items:center;     
+      padding:32px;
+      box-sizing:border-box;
+    }
+
+    
+    .card{
+      display:flex;
+      flex-direction:row;          
+      gap:var(--gap);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 10px 30px rgba(22,33,62,0.08);
+      padding:20px;
+      width:900px;
+      max-width:95%;
+      align-items:flex-start;
+    }
+
+    
+    .left{
+      display:flex;
+      flex-direction:column;     
+      align-items:center;        
+      width:260px;
+      gap:12px;
+      padding:8px 0;
+    }
+
+    .avatar{
+      width:180px;
+      height:180px;
+      border-radius:12px;
+      overflow:hidden;
+      display:block;
+      flex-shrink:0;
+      box-shadow:0 6px 18px rgba(43,124,255,0.12);
+    }
+
+    .quick-stats{
+      display:flex;
+      width:100%;
+      justify-content:space-between; 
+      gap:8px;
+    }
+
+    .stat{
+      flex:1 1 0;
+      background:#f6f9ff;
+      border-radius:10px;
+      padding:10px;
+      text-align:center;
+    }
+
+    .stat .num{font-weight:700;color:var(--accent);font-size:18px}
+    .stat .lbl{font-size:12px;color:var(--muted);margin-top:4px}
+
+    
+    .right{
+      display:flex;
+      flex-direction:column;    
+      gap:12px;
+      flex:1 1 auto;
+    }
+
+    .name-row{
+      display:flex;
+      justify-content:space-between; 
+      align-items:center;
+      gap:12px;
+    }
+
+    .name-block{
+      display:flex;
+      flex-direction:column;
+    }
+
+    h1{margin:0;font-size:22px}
+    .sub{color:var(--muted);font-size:14px;margin-top:4px}
+
+    .actions{
+      display:flex;
+      gap:8px;
+      align-items:center; 
+    }
+
+    .btn{
+      border:0;padding:8px 12px;border-radius:10px;cursor:pointer;font-weight:600;
+      background:var(--accent);color:white;
+    }
+
+    .outline{background:transparent;color:var(--accent);border:2px solid rgba(43,124,255,0.12)}
+
+    .bio{color:var(--muted);line-height:1.5;margin-top:4px}
+
+    .info{
+      display:flex;
+      gap:20px;
+      margin-top:6px;
+      flex-wrap:wrap;
+    }
+
+    .info-item{
+      display:flex;flex-direction:column;
+    }
+
+    .label{font-size:12px;color:var(--muted)}
+    .value{font-weight:700}
+
+    .skills{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:8px;
+    }
+
+    .skill{padding:6px 10px;border-radius:999px;font-size:13px;background:#eef6ff;color:var(--accent);font-weight:600}
+
+    
+    @media (max-width:720px){
+      .card{flex-direction:column;align-items:center}
+      .left{width:100%;flex-direction:row;justify-content:center}
+      .avatar{width:120px;height:120px}
+      .right{width:100%}
+      .name-row{flex-direction:column;align-items:center}
+      .actions{width:100%;justify-content:center}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <article class="card">
+      <div class="left">
+        <img class="avatar" src = "Hardik's Pic.HEIC" Student Avatar>
+
+        <div class="quick-stats">
+          <div class="stat">
+            <div class="num">8.9</div>
+            <div class="lbl">CGPA</div>
+          </div>
+          <div class="stat">
+            <div class="num">22</div>
+            <div class="lbl">Projects</div>
+          </div>
+          <div class="stat">
+            <div class="num">3</div>
+            <div class="lbl">Internships</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="name-row">
+          <div class="name-block">
+            <h1>Hardik Dagar</h1>
+            <div class="sub">B.Tech (CSE-DS) • ABES-EC, Ghaziabad</div>
+          </div>
+
+          <div class="actions">
+            <button class="btn">Message</button>
+            <button class="btn outline">Download CV</button>
+          </div>
+        </div>
+
+        <p class="bio">Passionate computer science student focused on data structures, algorithms and full‑stack development. Loves building projects, contributing to open source and making tutorial videos.</p>
+
+        <div class="info">
+          <div class="info-item">
+            <div class="label">Email</div>
+            <div class="value">hardikdagar1803@gmail.com</div>
+          </div>
+
+          <div class="info-item">
+            <div class="label">Phone</div>
+            <div class="value">+91 7895869313</div>
+          </div>
+
+          <div class="info-item">
+            <div class="label">Location</div>
+            <div class="value">Ghaziabad, India</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="label" style="margin-top:12px;">Skills</div>
+          <div class="skills">
+            <span class="skill">C++</span>
+            <span class="skill">HTML/CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">DS & Algo</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>
