@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Product Grid</title>
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --accent:#1f6feb;
+      --muted:#6b7280;
+      --radius:12px;
+      --gap:16px;
+      --max-width:1200px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111}
+    .page{padding:24px;display:flex;justify-content:center}
+    .container{width:100%;max-width:var(--max-width)}
+    .header{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+    .header .title{font-size:20px;font-weight:700}
+    .header .sub{color:var(--muted);font-size:14px}
+    .controls{display:flex;gap:12px;align-items:center;margin-top:8px;flex-wrap:wrap}
+    .search{flex:1;min-width:200px}
+    .search input{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #e6e9ef}
+    .sort{padding:8px 12px;border-radius:10px;border:1px solid #e6e9ef;background:white}
+    .grid{display:grid;gap:var(--gap);grid-template-columns:repeat(1,1fr)}
+    .card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 22px rgba(16,24,40,0.06);display:flex;flex-direction:column}
+    .thumb{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+    .card-body{padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+    .product-title{font-weight:700;font-size:15px}
+    .product-desc{font-size:13px;color:var(--muted)}
+    .price-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+    .price{font-weight:800;color:var(--accent)}
+    .cta{display:flex;gap:8px}
+    .btn{padding:8px 10px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn.primary{background:var(--accent);color:white}
+    .btn.ghost{background:transparent;border:1px solid #e6e9ef}
+    .badge{display:inline-block;padding:6px 8px;border-radius:999px;background:#eef6ff;color:var(--accent);font-weight:700;font-size:12px}
+    .footer{margin-top:18px;text-align:center;color:var(--muted);font-size:14px}
+    @media (min-width:480px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (min-width:720px){.grid{grid-template-columns:repeat(3,1fr)}}
+    @media (min-width:1024px){.grid{grid-template-columns:repeat(4,1fr)}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <header class="header">
+        <div class="title">Product Grid</div>
+        <div class="sub">Responsive, mobile-first product grid with breakpoints at 480px, 720px, 1024px, 1440px, 2560px</div>
+        <div class="controls">
+          <div class="search"><input type="search" placeholder="Search products..." /></div>
+          <select class="sort">
+            <option>Sort: Popular</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+          </select>
+          <div class="badge">12 items</div>
+        </div>
+      </header>
+
+      <section class="grid">
+        <article class="card">
+          <img class="thumb" src ="Wireless Headphone.jpg" alt="Product 1" />
+          <div class="card-body">
+            <div class="product-title">Wireless Headphones</div>
+            <div class="product-desc">Comfort fit · 20hr battery · Bluetooth 5.2</div>
+            <div class="price-row">
+              <div class="price">₹2,499</div>
+              <div class="cta">
+                <button class="btn ghost">Details</button>
+                <button class="btn primary">Buy</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="Smart Watch.webp" alt="Product 2" />
+          <div class="card-body">
+            <div class="product-title">Smartwatch Pro</div>
+            <div class="product-desc">Heart-rate monitor · GPS · 7 day battery</div>
+            <div class="price-row">
+              <div class="price">₹6,999</div>
+              <div class="cta">
+                <button class="btn ghost">Details</button>
+                <button class="btn primary">Buy</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="Portable speakers.jpg" alt="Product 3" />
+          <div class="card-body">
+            <div class="product-title">Portable Speaker</div>
+            <div class="product-desc">Waterproof · Deep bass · 10W output</div>
+            <div class="price-row">
+              <div class="price">₹1,799</div>
+              <div class="cta">
+                <button class="btn ghost">Details</button>
+                <button class="btn primary">Buy</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="Gaming mouse.jpg" alt="Product 4" />
+          <div class="card-body">
+            <div class="product-title">Gaming Mouse</div>
+            <div class="product-desc">16000 DPI · RGB · Ergonomic</div>
+            <div class="price-row">
+              <div class="price">₹1,299</div>
+              <div class="cta">
+                <button class="btn ghost">Details</button>
+                <button class="btn primary">Buy</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="USB-C.jpg" alt="Product 5" />
+          <div class="card-body">
+            <div class="product-title">USB-C Hub</div>
+            <div class="product-desc">4 ports · HDMI · Fast transfer</div>
+            <div class="price-row">
+              <div class="price">₹899</div>
+              <div class="cta">
+                <button class="btn ghost">Details</button>
+                <button class="btn primary">Buy</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="LED desk lamp.jpg" alt="Product 6" />
+          <div class="card-body">
+            <div class="product-title">LED Desk Lamp</div>
+            <div class="product-desc">Adjustable · Eye-friendly light · Touch control</div>
+            <div class="price-row">
+              <div class="price">₹1,149</div>
+              <div class="cta">
+                <button class="btn ghost">Details</button>
+                <button class="btn primary">Buy</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <div class="footer">Resize the window to see breakpoints: 1 column (mobile), 2 (small), 3 (tablet), 4 (desktop)</div>
+    </div>
+  </main>
+</body>
+</html>
