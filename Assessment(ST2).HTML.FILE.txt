@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Responsive Product Grid </title>
+<link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+<h1>Resposive Product Grid </h1>
+<p>This is a webpage for responsive product grid with / having mobile friendly designs using breakpoints.</p>
+
+<div class = "products" >
+	<div class = "item" > Product 1 </div>
+	<div class = "item" > Product 2 </div>
+	<div class = "item" > Product 3 </div>
+	<div class = "item" > Product 4 </div>
+</div>
+<div class = "footer" >
+<p> Made with Love , by Hardik Dagar. </p>
+</div>
+
+</body>
+</html>

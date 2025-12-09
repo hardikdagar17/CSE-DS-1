@@ -1,0 +1,44 @@
+.product-grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* Tablets */
+@media (min-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large tablets / small laptops */
+@media (min-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Desktops */
+@media (min-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    font-size: 18px;
+}
+
+.footer {
+    font-size : 10px;
+    background-color : grey;
+    display : flex;
+    justify-content : center;
+    text-align : bottom;
+}
