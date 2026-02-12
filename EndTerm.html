@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Navigation Menu — block / inline / inline-block / float / clear</title>
+  <style>
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.4; padding: 20px; }
+
+    header { margin-bottom: 18px; }
+    h1 { font-size: 20px; margin-bottom: 8px; }
+    p.note { color: #444; font-size: 14px; margin-bottom: 18px; }
+
+    
+    
+    .nav-wrap {
+      background: linear-gradient(90deg, #1f2937, #374151);
+      color: white;
+      border-radius: 8px;
+      padding: 10px;
+      overflow: auto; 
+    }
+
+    
+    
+    .logo {
+      display: inline-block; 
+      vertical-align: middle;
+      margin-right: 18px;
+      padding: 6px 12px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 6px;
+      font-weight: 700;
+    }
+
+    
+    
+    nav.main-nav {
+      float: left; 
+      vertical-align: middle; 
+    }
+
+    
+    nav.main-nav ul { list-style: none; }
+
+    
+    nav.main-nav li {
+      display: inline; 
+      margin-right: 12px; 
+    }
+
+    nav.main-nav a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 8px; 
+      border-radius: 4px;
+    }
+    nav.main-nav a:hover { background: rgba(255,255,255,0.08); }
+
+    
+    
+    .actions {
+      float: right; 
+      display: inline-block; 
+      vertical-align: middle;
+    }
+    .actions a {
+      display: inline-block; 
+      margin-left: 8px;
+      padding: 6px 10px;
+      background: rgba(255,255,255,0.08);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    
+    
+    
+    .clearfix-block {
+      clear: both; 
+      margin-top: 14px;
+      padding: 10px;
+      background: #ffffff;
+      color: #111827;
+      border-radius: 6px;
+    }
+
+    
+    @media (max-width: 520px) {
+      .logo, nav.main-nav, .actions { float: none; display: block; text-align: center; }
+      nav.main-nav li { display: block; margin: 6px 0; }
+      .actions a { margin: 6px 4px; }
+      .nav-wrap { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Navigation Menu — CSS behavior demo</h1>
+    <p class="note">This small demo uses <strong>block</strong> (nav-wrap &amp; other containers), <strong>inline</strong> (nav list items), <strong>inline-block</strong> (logo, buttons), <strong>float</strong> (left/right floats for layout) and <strong>clear</strong> (to push content below floated elements).</p>
+  </header>
+
+  
+  <div class="nav-wrap">
+
+    
+    <div class="logo">MySite</div>
+
+    
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    
+    <div class="actions">
+      <a href="#login">Login</a>
+      <a href="#signup">Sign up</a>
+    </div>
+
+    
+  </div>
+</body>
+</html>
